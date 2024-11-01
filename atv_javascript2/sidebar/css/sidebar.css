@@ -1,0 +1,52 @@
+.sidebar {
+    margin-top: 80px;
+    height: 100%;
+    position: fixed;
+    width: 4.5vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.5s ease;
+    padding-top: 10px;
+}
+
+.sidebar a {
+    padding: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+button#toggleButton {
+    cursor: pointer;
+    width: calc(100% - 20px);
+    border: none;
+    background: none;
+    color: #ffffff;
+}
+
+.sidebar.expanded {
+    width: 20vh;
+}
+
+.sidebar.expanded a {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 3.5vh;
+    }
+
+    .sidebar.expanded {
+        width: 40vw;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
